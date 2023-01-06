@@ -12,6 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello Home</h1>
+        <%@include file="menu.jsp" %>
+        
+        
     </body>
 </html>
