@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class AccessBd {
     
     protected static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
-    protected static final String DB_NAME = "dev09";
+    protected static final String DB_NAME = "MaBanque";
     protected static final String URL = "jdbc:mysql://localhost/" + DB_NAME + "?useTimeZone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false";
     protected static final String USER = "root";
     protected static final String PASSWORD = "";

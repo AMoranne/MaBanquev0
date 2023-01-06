@@ -91,12 +91,20 @@ public class ConnexionClientServlet extends HttpServlet {
                 request.setAttribute("msg", "Identifiant ou mot de passe incorrect");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }
-        } catch (IOException | ServletException e) {
+            
+        } 
+        
+            catch (IOException | ServletException e) {
             PrintWriter out = response.getWriter();
             out.println(e.getMessage());
+            
+
         } catch (SQLException ex) {
             Logger.getLogger(ConnexionClientServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
+        
+
+        
 
     }
     

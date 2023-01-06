@@ -5,6 +5,7 @@
  */
 package fr.solutec.servlet;
 
+import fr.solutec.dao.ClientDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -70,10 +71,31 @@ public class RegisterServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String login = "test";
+        String adresse = "adresse test";
+        String password = request.getParameter("password");
+        String prenom = request.getParameter("firstname");
+        String nom = request.getParameter("lastname");
+        String mail = request.getParameter("mail");
+        String numero = request.getParameter("phoneNumber");
+       
+        
+        
+        try {
+            ClientDao.setByLoginAndPassword(nom, prenom, adresse, mail, numero, login, password);
+            }
+                
+            
+            
+        catch (Exception e) {
+            PrintWriter out = response.getWriter();
+            out.println(e.getMessage());
+              //Renvoi le message d'exeption, permet d'avoir le message d'erreur.
+            }
+        
+        
+        }
 
     /**
      * Returns a short description of the servlet.
