@@ -64,7 +64,7 @@
                     </nav>
                 </li>
                 <li class="nav-item">
-                    <a style="color: white" href="" class ="nav-link">About</a>
+                    <a style="color: white" href="about" class ="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a style="color: white" href="deco" class ="nav-link"><i class="fas fa-power-off"></i> </a>

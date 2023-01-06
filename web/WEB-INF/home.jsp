@@ -14,13 +14,13 @@
     <body>
         <%@include file="menu.jsp" %>
 
-    </div><section class="jumbotron text-center">
+    <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">Banque qui veut ton argent</h1>
             <p class="lead text-muted">Bienvenue sur notre site internet. Nous vous voulons que du bien</p>
             <p>
                 <a href="https://www.youtube.com/watch?v=gRvEAeHmkXI" class="btn btn-primary my-2">Voir notre catalogue de chat mignon</a>
-                <a href="connexion" class="btn btn-secondary my-2">Voir nos offres attractives</a>
+                <a href="connexionClient" class="btn btn-secondary my-2">Voir nos offres attractives</a>
             </p>
         </div>
     </section>

@@ -20,7 +20,7 @@
         <%@include file="menu.jsp" %>
 
         <!-- Default form login -->
-        <form class="text-center border border-light p-5" action="#!">
+        <form class="text-center border border-light p-5" action="home" method="post">
 
             <p class="h4 mb-4">Sign in</p>
 
@@ -49,7 +49,7 @@
 
             <!-- Register -->
             <p>Not a member?
-                <a href="">Register</a>
+                <a href="register">Register</a>
             </p>
 
             <!-- Social login -->
