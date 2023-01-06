@@ -5,8 +5,15 @@
  */
 package fr.solutec.servlet;
 
+import fr.solutec.dao.ClientDao;
+import fr.solutec.model.Client;
+import fr.solutec.model.Person;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -72,8 +79,27 @@ public class ConnexionClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String login = request.getParameter("login");
+        String mdp = request.getParameter("password");
+
+        try {
+            Client p = ClientDao.getByLoginAndPassword(login, mdp);
+            if (p != null) {
+                response.sendRedirect("home");
+            } else {
+                
+                request.setAttribute("msg", "Identifiant ou mot de passe incorrect");
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+        } catch (IOException | ServletException e) {
+            PrintWriter out = response.getWriter();
+            out.println(e.getMessage());
+        } catch (SQLException ex) {
+            Logger.getLogger(ConnexionClientServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
+    
 
     /**
      * Returns a short description of the servlet.
