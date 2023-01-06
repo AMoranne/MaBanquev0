@@ -11,66 +11,56 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
 
-        
-      
-        
+
+
+
     </head>
     <body>
-        
+
         <%@include file="menu.jsp" %>
 
-        <form>
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <input type="email" id="form2Example1" class="form-control" />
-                <label class="form-label" for="form2Example1">Email address</label>
-            </div>
+        <!-- Default form login -->
+        <form class="text-center border border-light p-5" action="#!">
 
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <input type="password" id="form2Example2" class="form-control" />
-                <label class="form-label" for="form2Example2">Password</label>
-            </div>
+            <p class="h4 mb-4">Sign in</p>
 
-            <!-- 2 column grid layout for inline styling -->
-            <div class="row mb-4">
-                <div class="col d-flex justify-content-center">
-                    <!-- Checkbox -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
-                        <label class="form-check-label" for="form2Example34"> Remember me </label>
+            <!-- Email -->
+            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+            <!-- Password -->
+            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+            <div class="d-flex justify-content-around">
+                <div>
+                    <!-- Remember me -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                        <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
                     </div>
                 </div>
-
-                <div class="col">
-                    <!-- Simple link -->
-                    <a href="#!">Forgot password?</a>
+                <div>
+                    <!-- Forgot password -->
+                    <a href="">Forgot password?</a>
                 </div>
             </div>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <!-- Sign in button -->
+            <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
 
-            <!-- Register buttons -->
-            <div class="text-center">
-                <p>Not a member? <a href="#!">Register</a></p>
-                <p>or sign up with:</p>
-                <button type="button" class="btn btn-secondary btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                </button>
+            <!-- Register -->
+            <p>Not a member?
+                <a href="">Register</a>
+            </p>
 
-                <button type="button" class="btn btn-secondary btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                </button>
+            <!-- Social login -->
+            <p>or sign in with:</p>
 
-                <button type="button" class="btn btn-secondary btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                </button>
+            <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+            <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
 
-                <button type="button" class="btn btn-secondary btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                </button>
-            </div>
         </form>
+        <!-- Default form login -->
     </body>
 </html>

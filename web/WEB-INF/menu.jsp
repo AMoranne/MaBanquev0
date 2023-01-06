@@ -36,10 +36,10 @@
         <div>
             <ul class="nav peach-gradient nav-fill w-100" > 
                 <li class="nav-item">
-                    <a style="color: white" href="login" class ="nav-link">Home</a>
+                    <a style="color: white" href="Home" class ="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color: white" href="liste_persons" class ="nav-link">Membre</a>
+                    <a style="color: white" href="Connexion" class ="nav-link">Connexion</a>
                 </li>
                 <li class="nav-item">
                     <a style="color: white" href="" class ="nav-link">About</a>
