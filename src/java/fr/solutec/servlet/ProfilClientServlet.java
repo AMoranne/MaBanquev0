@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author dsi
  */
-@WebServlet(name = "ProfilClientServlet", urlPatterns = {"/profilclient"})
+@WebServlet(name = "ProfilClientServlet", urlPatterns = {"/profilClient"})
 public class ProfilClientServlet extends HttpServlet {
 
     /**
