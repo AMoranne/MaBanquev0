@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author 33624
  */
-@WebServlet(name = "ConnexionServlet", urlPatterns = {"/connexion"})
-public class ConnexionServlet extends HttpServlet {
+@WebServlet(name = "ConnexionAdminServlet", urlPatterns = {"/connexionAdmin"})
+public class ConnexionAdminServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +37,10 @@ public class ConnexionServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ConnexionServlet</title>");            
+            out.println("<title>Servlet ConnexionAdminServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ConnexionServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ConnexionAdminServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -58,7 +58,7 @@ public class ConnexionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       request.getRequestDispatcher("WEB-INF/connexion.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/connexionAdmin.jsp").forward(request, response);
     }
 
     /**
