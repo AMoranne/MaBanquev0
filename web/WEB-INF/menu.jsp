@@ -34,20 +34,20 @@
     </head>
     <body >
         <div>
-            <u1 class="nav"> 
-                <li class=nav-item">
+            <ul class="nav peach-gradient nav-fill w-100" > 
+                <li class="nav-item">
                     <a style="color: white" href="login" class ="nav-link">Home</a>
                 </li>
-                <li class=nav-item">
+                <li class="nav-item">
                     <a style="color: white" href="liste_persons" class ="nav-link">Membre</a>
                 </li>
-                <li class=nav-item">
+                <li class="nav-item">
                     <a style="color: white" href="" class ="nav-link">About</a>
                 </li>
-                <li class=nav-item">
+                <li class="nav-item">
                     <a style="color: white" href="deco" class ="nav-link"><i class="fas fa-power-off"></i> </a>
                 </li>
-            </u1>
+            </ul>
         </div>
     </body>
 </html>
