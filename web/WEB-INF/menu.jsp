@@ -36,7 +36,7 @@
         <div>
             <ul class="nav peach-gradient nav-fill w-100" > 
                 <li class="nav-item">
-                    <a style="color: white" href="Home" class ="nav-link">Home</a>
+                    <a style="color: white" href="home" class ="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
                     <nav class="navbar navbar-inverse" role="navigation">
@@ -53,11 +53,11 @@
                             <div class="collapse navbar-collapse" id="menu">
                                 <!--nav navbar-nav used to sets the navigation bar size( either increase or reduce) -->
                                 <ul class="nav navbar-nav">
-                                    <!--        stretched-link generates strechable link -->
-                                    <a href="#" class="stretched-link">Connexion client</a>
-                                    <a href="#" class="stretched-link">Connexion conseiller</a>
-                                    <a href="#" class="stretched-link">Connexion admin</a>
-                                    <a href="#" class="btn btn-default stretched-link">About</a>
+                                    <!--stretched-link generates strechable link -->
+                                    <li><a href="connexionClient" class="stretched-link">Connexion client</a></li>
+                                    <li><a href="connexionConseiller" class="stretched-link">Connexion conseiller</a></li>
+                                    <li><a href="connexionAdmin" class="stretched-link">Connexion admin</a></li>
+                    
                                 </ul>
                             </div>
                         </div>
