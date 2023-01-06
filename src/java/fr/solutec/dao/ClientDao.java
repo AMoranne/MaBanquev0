@@ -50,4 +50,31 @@ public class ClientDao {
         return client;  //Renvoi null si personne n'a été trouvé
     }
     
+    
+    public static void setByLoginAndPassword(String nom, String prenom, String adresse, String mail, String numero, String login, String password) throws SQLException{
+        
+        String sql2 = "INSERT into client(nom, prenom, adresse, mail, numero, login, password) values (?, ?, ?, ?, ?, ?, ?);";
+        
+        Connection connexion = AccessBd.getConnection();
+        
+        PreparedStatement prepare = connexion.prepareStatement(sql2);
+        
+        
+        prepare.setString(1, nom);
+        prepare.setString(2, prenom);
+        prepare.setString(3, adresse);
+        prepare.setString(4, mail);
+        prepare.setString(5, numero);
+        prepare.setString(6, login);
+        prepare.setString(7, password);
+        
+        prepare.execute();
+
+        
+        
+        
+        
+     
+    }
+    
 }
