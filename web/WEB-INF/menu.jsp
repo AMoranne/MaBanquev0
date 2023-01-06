@@ -39,7 +39,29 @@
                     <a style="color: white" href="Home" class ="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color: white" href="Connexion" class ="nav-link">Connexion</a>
+                    <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="container">
+                    <!-- container gives content bootstrap alignment -->
+                    <div class="navbar-header">
+                    <!-- navbar-header gives header -->
+                    <!-- navbar-toggle collapsed for hide the content -->
+                    <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#menu">Connexion
+                    </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="menu">
+                    <!--nav navbar-nav used to sets the navigation bar size( either increase or reduce) -->
+                    <ul class="nav navbar-nav">
+                    <!--        stretched-link generates strechable link -->
+                    <a href="#" class="stretched-link">Connexion client</a>
+                    <a href="#" class="stretched-link">Connexion conseiller</a>
+                    <a href="#" class="stretched-link">Connexion admin</a>
+                    <a href="#" class="btn btn-default stretched-link">About</a>
+                    </ul>
+                    </div>
+                    </div>
+                    </nav>
                 </li>
                 <li class="nav-item">
                     <a style="color: white" href="" class ="nav-link">About</a>
