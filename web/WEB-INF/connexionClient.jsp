@@ -49,7 +49,7 @@
 
             <!-- Register -->
             <p>Not a member?
-                <a href="">Register</a>
+                <a href="register">Register</a>
             </p>
 
             <!-- Social login -->

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author 33624
  */
-@WebServlet(name = "RegisterServlet", urlPatterns = {"/Register"})
+@WebServlet(name = "RegisterServlet", urlPatterns = {"/register"})
 public class RegisterServlet extends HttpServlet {
 
     /**

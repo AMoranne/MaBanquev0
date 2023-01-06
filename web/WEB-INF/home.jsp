@@ -14,7 +14,7 @@
     <body>
         <%@include file="menu.jsp" %>
 
-    </div><section class="jumbotron text-center">
+    <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">Banque qui veut ton argent</h1>
             <p class="lead text-muted">Bienvenue sur notre site internet. Nous vous voulons que du bien</p>
