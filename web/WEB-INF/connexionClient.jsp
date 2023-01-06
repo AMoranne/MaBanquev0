@@ -20,7 +20,7 @@
         <%@include file="menu.jsp" %>
 
         <!-- Default form login -->
-        <form class="text-center border border-light p-5" action="login" method="post">
+        <form class="text-center border border-light p-5" action="home" method="post">
 
             <p class="h4 mb-4">Sign in</p>
 
