@@ -5,6 +5,7 @@
  */
 package fr.solutec.servlet;
 
+import fr.solutec.model.Person;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -58,7 +60,21 @@ public class ProfilClientServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/profilclient.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        Person p = (Person) session.getAttribute("user");
+        
+        if (p != null) {
+            request.getRequestDispatcher("WEB-INF/profilclient.jsp").forward(request, response);
+        }
+        else {
+            request.setAttribute("msg", "Veuillez vous connecter.");
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+        
+        
+        
+            
+        }
+        
     }
 
     /**

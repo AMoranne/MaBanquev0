@@ -20,15 +20,15 @@
         <%@include file="menu.jsp" %>
 
         <!-- Default form login -->
-        <form class="text-center border border-light p-5" action="home" method="post">
+        <form class="text-center border border-light p-5" action="connexionClient" method="POST">
 
             <p class="h4 mb-4">Sign in</p>
 
             <!-- Email -->
-            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" name="mail">
 
             <!-- Password -->
-            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" name="password">
 
             <div class="d-flex justify-content-around">
                 <div>

@@ -19,6 +19,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -79,28 +80,26 @@ public class ConnexionClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String login = request.getParameter("login");
+        String mail = request.getParameter("mail");
         String mdp = request.getParameter("password");
 
         try {
-            Client p = ClientDao.getByLoginAndPassword(login, mdp);
+            Client p = ClientDao.getByMailAndPassword(mail, mdp);
             if (p != null) {
-                response.sendRedirect("home");
+                HttpSession session = request.getSession();
+                session.setAttribute("user", p);
+                request.getRequestDispatcher("WEB-INF/profilclient.jsp").forward(request, response);  
             } else {
                 
                 request.setAttribute("msg", "Identifiant ou mot de passe incorrect");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }
             
-        } 
-        
-            catch (IOException | ServletException e) {
-            PrintWriter out = response.getWriter();
-            out.println(e.getMessage());
+        } catch (Exception e) {
+        PrintWriter out = response.getWriter();
+        out.println(e.getMessage());
             
 
-        } catch (SQLException ex) {
-            Logger.getLogger(ConnexionClientServlet.class.getName()).log(Level.SEVERE, null, ex);
         } 
         
 

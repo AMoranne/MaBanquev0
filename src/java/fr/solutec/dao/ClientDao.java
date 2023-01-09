@@ -27,12 +27,12 @@ public class ClientDao {
     
     private static Component rootPane;
     
-    public static Client getByLoginAndPassword(String login, String password) throws SQLException{
+    public static Client getByMailAndPassword(String mail, String password) throws SQLException{
         Client client = null;
-        String sql = "SELECT * FROM client WHERE login = ? AND password = ?";
+        String sql = "SELECT * FROM client WHERE mail = ? AND password = ?";
         Connection connexion = AccessBd.getConnection();
         PreparedStatement prepare = connexion.prepareStatement(sql);
-        prepare.setString(1, login);
+        prepare.setString(1, mail);
         prepare.setString(2, password);
         
         ResultSet rs = prepare.executeQuery();
